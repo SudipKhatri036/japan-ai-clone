@@ -1,0 +1,33 @@
+#root {
+  width: 100%;
+}
+
+.app {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-img-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.app__main-img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-img-wrapper {
+    height: 100vh;
+  }
+
+  .app__main-img {
+    height: 100%;
+    object-fit: cover;
+  }
+}

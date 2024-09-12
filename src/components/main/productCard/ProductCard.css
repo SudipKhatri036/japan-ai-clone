@@ -1,0 +1,141 @@
+.product-card {
+  width: 80%;
+  height: 18rem;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.product-card.row-rev {
+  flex-direction: row-reverse;
+}
+
+.product-card__imgCont {
+  width: 100%;
+}
+
+.product-card__imgCont img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card__contentCont {
+  width: 100%;
+  color: black;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: end;
+  font-weight: bold;
+  gap: 1rem;
+  padding-left: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.product-card.row-rev .product-card__contentCont {
+  align-items: flex-end;
+}
+
+.product-card__contentCont.chat-bg {
+  background: url(../../../../public/pc_chat_bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.product-card__contentCont.speech-bg {
+  background: url(../../../../public/pc_speech_bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.product-card__contentCont.marketing-bg {
+  background: url(../../../../public/pc_marketing_bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.product-card__subtitle {
+  font-size: 1.1vw;
+}
+
+.btn--learn-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4vw;
+  width: 40%;
+  padding: 0.2rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-icon {
+  width: 40px;
+  transition: all 0.3s ease;
+  height: 30px;
+  font-size: 1vw;
+}
+
+.btn--learn-more:hover .btn-icon {
+  color: maroon;
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 940px) {
+  .product-card,
+  .product-card.row-rev {
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .product-card__imgCont {
+    height: 350px;
+  }
+
+  .product-card__contentCont,
+  .product-card.row-rev .product-card__contentCont {
+    min-height: 300px;
+    align-items: center;
+  }
+  .product-card__contentCont.chat-bg,
+  .product-card__contentCont.speech-bg,
+  .product-card__contentCont.marketing-bg {
+    background-position: center center;
+  }
+
+  .product-card__subtitle {
+    font-size: 2.2vh;
+  }
+
+  .btn--learn-more {
+    font-size: 1.5vh;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .product-card__contentCont.chat-bg,
+  .product-card__contentCont.speech-bg,
+  .product-card__contentCont.marketing-bg {
+    background-position: top 10% center;
+  }
+
+  .btn--learn-more {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .product-card__contentCont.chat-bg,
+  .product-card__contentCont.speech-bg,
+  .product-card__contentCont.marketing-bg {
+    background-position: center center;
+  }
+}
