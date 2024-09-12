@@ -38,6 +38,30 @@ body {
   font-weight: 700;
 }
 
+.btn--boxArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4vw;
+  width: 40%;
+  padding: 0.2rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-icon {
+  width: 40px;
+  transition: all 0.3s ease;
+  height: 30px;
+  font-size: 1vw;
+}
+
+.btn--boxArrow .btn-icon {
+  color: maroon;
+  transform: scale(1.2);
+}
+
 .section-heading {
   font-size: 3vw;
   text-align: center;
