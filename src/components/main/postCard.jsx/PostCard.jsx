@@ -1,10 +1,10 @@
 import "./PostCard.css";
 
-function PostCard() {
+function PostCard({ imgSrc }) {
   return (
     <a className="post-card">
       <div className="post__img-wrap">
-        <img src="./news-img-1.jpg" alt="Post image" />
+        <img src={imgSrc} alt="Post image" />
       </div>
       <div className="details">
         <div className="details__post-status">

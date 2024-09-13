@@ -9,7 +9,7 @@ function ProductCard({ direction = "", subtitle, imgSrc, bgName }) {
       </div>
       <div className={`product-card__contentCont ${bgName} bg-prop`}>
         <p className="product-card__subtitle">{subtitle}</p>
-        <button className="btn btn--learn-more">
+        <button className="btn btn--boxArrow btn--learn-more">
           Learn more <GoTriangleRight className="btn-icon" />
         </button>
       </div>

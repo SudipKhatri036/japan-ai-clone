@@ -1,76 +1,53 @@
 import "./NavBar.css";
+import NavBarLink from "../navbarLink/NavBarLink";
 
 const menuList = [
-  "Japan Ai Chat",
-  "Japan Ai Speech",
-  "Japan Ai Marketing",
-  "Company Profile",
-  "Seminar",
-  "news",
-  "company introduction materials",
-  "inquiry",
+  {
+    title: "Japan Ai Chat",
+    href: "/chat",
+  },
+  {
+    title: "Japan Ai Speech",
+    href: "/speech",
+  },
+  {
+    title: "Japan Ai Marketing",
+    href: "/marketing",
+  },
+  {
+    title: "Company profile",
+    href: "/profile",
+  },
+  {
+    title: "Seminar",
+    href: "/seminar",
+  },
+
+  {
+    title: "News",
+    href: "/news",
+  },
+  {
+    title: "company introduction materials",
+    href: "/companyGuide",
+  },
+  {
+    title: "inquiry",
+    href: "/inquiry",
+  },
 ];
 
-function NavBar({ isMenuActive }) {
+function NavBar({ isMenuActive, isFixedNav }) {
   return (
-    <nav className={`nav ${isMenuActive ? "nav--active" : ""}`}>
-      <ul className="flex nav__list">
-        <li>
-          <a
-            href="#"
-            className="nav__links nav__links--short"
-            data-hover="Japan Ai Chat"
-          >
-            Japan Ai Chat
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="nav__links nav__links--short"
-            data-hover="Japan Ai Speech"
-          >
-            Japan Ai Speech
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="nav__links nav__links--short"
-            data-hover="Japan Ai Marketing"
-          >
-            Japan Ai Marketing
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav__links" data-hover="Company Profile">
-            Company Profile
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav__links" data-hover="Seminar">
-            Seminar
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav__links" data-hover="News">
-            News
-          </a>
-        </li>
-        <li className="nav__links--special">
-          <a
-            href="#"
-            className="nav__links"
-            data-hover="Company introduction materials"
-          >
-            Company introduction materials
-          </a>
-        </li>
-        <li className="nav__links--special">
-          <a href="#" className="nav__links" data-hover="Inquiry">
-            inquiry_
-          </a>
-        </li>
+    <nav
+      className={`nav ${isMenuActive ? "nav--active" : ""} ${
+        !isMenuActive && isFixedNav ? "c-dark" : ""
+      }`}
+    >
+      <ul className="nav__list">
+        {menuList.map((list, index) => {
+          return <NavBarLink key={index} list={list} index={index} />;
+        })}
       </ul>
     </nav>
   );

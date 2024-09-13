@@ -1,21 +1,62 @@
+import { useRef } from "react";
+import { easeIn, motion, useScroll, useTransform } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
 
 import "./Hero.css";
 
-function Hero() {
+const heroTextVar = {
+  initial: {
+    opacity: 0,
+    y: 30,
+  },
+  animation: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
+function Hero({ onGoToOverview }) {
+  const targetRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+
+    offset: ["0.8 0.9", "0.00 0.3"],
+  });
+
+  const TranslateTo = useTransform(scrollYProgress, [0, 1], ["25px", "-50px"]);
+
   return (
     <div className="hero">
-      <h2 className="hero__subtitle">Generative AI deployment company</h2>
-      <h1 className="hero__title">
+      <motion.h2
+        variants={heroTextVar}
+        initial="initial"
+        animate="animation"
+        transition={{ duration: 0.5, delay: 1, ease: easeIn }}
+        className="hero__subtitle"
+      >
+        Generative AI deployment company
+      </motion.h2>
+      <motion.h1
+        variants={heroTextVar}
+        initial="initial"
+        animate="animation"
+        transition={{ duration: 0.5, delay: 1.2, ease: easeIn }}
+        className="hero__title"
+      >
         Creating a sustainable future society with AI
-      </h1>
+      </motion.h1>
       <div className="hero__btn-cont">
-        <button className="btn btn--scroll">
+        <button className="btn btn--scroll" onClick={onGoToOverview}>
           Scroll Down <FaChevronDown />
         </button>
       </div>
 
-      <div className="hero__description">
+      <motion.div
+        style={{ translateY: TranslateTo, opacity: scrollYProgress }}
+        className="hero__description"
+        ref={targetRef}
+      >
         <p>
           JAPAN AI combines the wisdom and experience of our predecessors with
           modern innovation
@@ -25,7 +66,7 @@ function Hero() {
           to create a vairety of new value to improve the productivity of
           Japanese companies and revitalize industry.
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 }

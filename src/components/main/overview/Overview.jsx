@@ -1,12 +1,12 @@
 import "./Overview.css";
 
-function Overview() {
+function Overview({ overviewRef }) {
   return (
-    <section className="overview">
+    <section className="overview" ref={overviewRef}>
       <h2 className="section-heading">JAPAN AI Business Overview</h2>
       <p className="overview__content">
         JAPAN AI develops and provides various AI products to improve the
-        productivity of Japanese companies and revitalize industry.{" "}
+        productivity of Japanese companies and revitalize industry.
         <span className="overview__span">We</span>
       </p>
       <p className="overview__content">

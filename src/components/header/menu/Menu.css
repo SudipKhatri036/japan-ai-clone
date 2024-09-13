@@ -3,8 +3,13 @@
   color: white;
 }
 
+.header__menu-cont.dark {
+  color: black;
+}
+
 .btn--menu-btn {
   width: 100%;
+  border: none;
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -22,6 +27,11 @@
   height: 3px;
   transition: all 0.3s ease;
 }
+
+.header__menu-cont.dark .btn--menu-btn span {
+  background-color: black;
+}
+
 .btn--menu-btn.active :nth-child(1) {
   position: absolute;
   transform: rotate(45deg);

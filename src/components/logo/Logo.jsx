@@ -1,7 +1,7 @@
-function Logo() {
+function Logo({ imgSrc }) {
   return (
     <a href="#" className="logo">
-      <img src="./logo_w.svg" className="logo__image" />
+      <img src={imgSrc} className="logo__image" />
     </a>
   );
 }

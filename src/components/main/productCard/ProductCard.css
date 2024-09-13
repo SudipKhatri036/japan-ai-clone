@@ -40,21 +40,21 @@
 }
 
 .product-card__contentCont.chat-bg {
-  background: url(../../../../public/pc_chat_bg.png);
+  background: url(../../../../pc_chat_bg.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 
 .product-card__contentCont.speech-bg {
-  background: url(../../../../public/pc_speech_bg.png);
+  background: url(../../../../pc_speech_bg.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 
 .product-card__contentCont.marketing-bg {
-  background: url(../../../../public/pc_marketing_bg.png);
+  background: url(../../../../pc_marketing_bg.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -65,22 +65,11 @@
 }
 
 .btn--learn-more {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 1.4vw;
   width: 40%;
   padding: 0.2rem;
   background-color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-icon {
-  width: 40px;
-  transition: all 0.3s ease;
-  height: 30px;
-  font-size: 1vw;
+  border: 1px solid black;
 }
 
 .btn--learn-more:hover .btn-icon {
@@ -137,5 +126,14 @@
   .product-card__contentCont.speech-bg,
   .product-card__contentCont.marketing-bg {
     background-position: center center;
+  }
+
+  .product-card__imgCont {
+    height: 250px;
+  }
+
+  .product-card__contentCont {
+    height: 250px;
+    padding: 1rem;
   }
 }

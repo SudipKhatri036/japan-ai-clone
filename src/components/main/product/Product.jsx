@@ -1,4 +1,5 @@
 import ProductCard from "../productCard/ProductCard";
+import "./Product.css";
 
 function Product() {
   return (

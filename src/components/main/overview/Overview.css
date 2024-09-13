@@ -1,5 +1,5 @@
 .overview {
-  padding-top: 15rem;
+  padding-top: 2rem;
   color: black;
   text-align: center;
   margin-bottom: 3rem;
@@ -28,7 +28,7 @@
 
 @media only screen and (max-width: 767px) {
   .overview {
-    padding-top: 8rem;
+    padding-top: 2rem;
   }
 
   .overview__content {
@@ -37,16 +37,18 @@
 }
 
 @media only screen and (max-width: 560px) {
-  .overview {
-    padding-top: 8rem;
-  }
-
   .overview__content {
     font-size: 1.5vh;
   }
 }
 
 @media only screen and (max-width: 450px) {
+  .overview {
+    padding-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 340px) {
   .overview {
     padding-top: 5rem;
   }
