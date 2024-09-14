@@ -78,3 +78,9 @@
     text-align: right;
   }
 }
+
+@media only screen and (max-width: 300px) {
+  .footer__p-mark img {
+    max-width: 100%;
+  }
+}

@@ -7,7 +7,18 @@
   gap: 2rem;
   position: relative;
   transition: all 0.3s ease-in-out;
+  color: white;
 }
+
+.header.header--not-home {
+  background-color: white;
+  color: black;
+}
+
+.header.header.header--not-home.active {
+  color: white;
+}
+
 .header.header--fixed {
   position: fixed;
   z-index: 2;
@@ -18,13 +29,49 @@
   color: black;
 }
 
+.header.header.header--fixed.active {
+  color: white;
+}
+
 .logo__image {
-  width: 100px;
+  width: 65px;
+  object-fit: cover;
   height: 100%;
 }
 
+.header .btn--menu-btn span {
+  background-color: white;
+}
+
+.header.header--not-home .btn--menu-btn span {
+  background-color: black;
+}
+
 .header.header--fixed .btn--menu-btn span {
+  background-color: black;
+}
+.header.header--not-home.active .btn--menu-btn span {
+  background-color: white;
+}
+
+.header.header--fixed.active .btn--menu-btn span {
+  background-color: white;
+}
+
+.header.header--not-home .nav__links--special {
+  border: 1px solid black;
+}
+.header.active.header--not-home .nav__links--special {
+  border: 1px solid white;
+}
+
+.header.header--not-home .nav__links,
+.header.header--not-home .nav__links::before {
   color: black;
+}
+
+.header.active.header--not-home .nav__links {
+  color: white;
 }
 
 @media only screen and (max-width: 1105px) {
@@ -34,5 +81,11 @@
 
   .logo {
     z-index: 10;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .header {
+    padding: 1rem;
   }
 }

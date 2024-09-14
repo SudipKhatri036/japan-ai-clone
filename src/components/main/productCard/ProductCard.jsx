@@ -3,7 +3,7 @@ import "./ProductCard.css";
 
 function ProductCard({ direction = "", subtitle, imgSrc, bgName }) {
   return (
-    <div className={`product-card ${direction}`}>
+    <div className={`product-card${direction}`}>
       <div className="product-card__imgCont">
         <img src={imgSrc} alt="product image" />
       </div>

@@ -5,14 +5,23 @@ import Menu from "./menu/Menu";
 import Logo from "../logo/Logo";
 
 import "./Header.css";
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isFixedNav, setIsFixedNav] = useState(false);
 
+  const location = useLocation();
+
+  const isHomePage = location.pathname === "/";
+
   function setFixed() {
     if (window.scrollY >= 100) setIsFixedNav(true);
     else setIsFixedNav(false);
+  }
+
+  function handleMenuOpen() {
+    setIsMenuActive(!isMenuActive);
   }
 
   useEffect(
@@ -23,14 +32,14 @@ function Header() {
   );
 
   return (
-    <header className={`header ${isFixedNav ? "header--fixed" : ""}`}>
-      <Logo imgSrc={`./logo_${!isMenuActive && isFixedNav ? "b" : "w"}.svg`} />
-      <NavBar isMenuActive={isMenuActive} isFixedNav={isFixedNav} />
-      <Menu
-        setIsMenuActive={setIsMenuActive}
-        isMenuActive={isMenuActive}
-        isFixedNav={isFixedNav}
-      />
+    <header
+      className={`header${isMenuActive ? " active" : ""}${
+        isFixedNav ? " header--fixed" : ""
+      }${!isHomePage ? " header--not-home" : ""}`}
+    >
+      <Logo />
+      <NavBar setIsMenuActive={setIsMenuActive} />
+      <Menu onMenuOpen={handleMenuOpen} />
     </header>
   );
 }

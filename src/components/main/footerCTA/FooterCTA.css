@@ -6,3 +6,10 @@
   margin: 0 auto;
   margin-block: 2rem;
 }
+
+@media only screen and (max-width: 570px) {
+  .footer-cta {
+    width: 100%;
+    flex-direction: column;
+  }
+}

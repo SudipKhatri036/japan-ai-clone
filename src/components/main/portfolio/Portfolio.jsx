@@ -47,7 +47,7 @@ function Portfolio() {
   return (
     <div className="portfolio">
       <div className="portfolio__img-cont">
-        <div className="larg-img-cont">
+        <div className="large-img-cont">
           <img
             src="./01hero.jpg"
             alt="Girl image"
@@ -64,7 +64,7 @@ function Portfolio() {
         </motion.div>
       </div>
       <div className="portfolio__img-cont portfolio__img-cont--rowrev">
-        <div className="larg-img-cont">
+        <div className="large-img-cont">
           <img
             src="./04hero.jpg"
             alt="Girl image"

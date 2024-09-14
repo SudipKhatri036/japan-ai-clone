@@ -1,10 +1,5 @@
 .header__menu-cont {
   display: none;
-  color: white;
-}
-
-.header__menu-cont.dark {
-  color: black;
 }
 
 .btn--menu-btn {
@@ -21,22 +16,18 @@
 }
 
 .btn--menu-btn span {
-  background-color: white;
   display: block;
   width: 25px;
   height: 3px;
   transition: all 0.3s ease;
+  color: inherit;
 }
 
-.header__menu-cont.dark .btn--menu-btn span {
-  background-color: black;
-}
-
-.btn--menu-btn.active :nth-child(1) {
+.header.active .btn--menu-btn :nth-child(1) {
   position: absolute;
   transform: rotate(45deg);
 }
-.btn--menu-btn.active :nth-child(2) {
+.header.active .btn--menu-btn :nth-child(2) {
   transform: rotate(-45deg);
 }
 

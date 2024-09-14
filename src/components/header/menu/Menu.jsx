@@ -1,17 +1,10 @@
 import "./Menu.css";
 
-function Menu({ setIsMenuActive, isMenuActive, isFixedNav }) {
+function Menu({ onMenuOpen }) {
   return (
-    <div
-      className={`header__menu-cont ${
-        !isMenuActive && isFixedNav ? "dark" : ""
-      }`}
-    >
+    <div className={`header__menu-cont`}>
       <h3>Menu</h3>
-      <button
-        className={`btn btn--menu-btn ${isMenuActive ? "active" : ""} `}
-        onClick={() => setIsMenuActive(!isMenuActive)}
-      >
+      <button className={`btn btn--menu-btn`} onClick={onMenuOpen}>
         <span></span>
         <span></span>
       </button>

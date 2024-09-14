@@ -102,6 +102,7 @@
 
   .product-card__subtitle {
     font-size: 2.2vh;
+    text-align: center;
   }
 
   .btn--learn-more {
@@ -116,6 +117,10 @@
     background-position: top 10% center;
   }
 
+  .product-card__subtitle {
+    font-size: 1.2rem;
+  }
+
   .btn--learn-more {
     width: 80%;
   }
@@ -123,9 +128,12 @@
 
 @media only screen and (max-width: 430px) {
   .product-card__contentCont.chat-bg,
-  .product-card__contentCont.speech-bg,
   .product-card__contentCont.marketing-bg {
-    background-position: center center;
+    background-position: center left 0px;
+  }
+
+  .product-card__contentCont.speech-bg {
+    background-position: center right 0px;
   }
 
   .product-card__imgCont {
@@ -135,5 +143,25 @@
   .product-card__contentCont {
     height: 250px;
     padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .product-card__subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1460px) {
+  .product-card {
+    height: 20rem;
+  }
+
+  .product-card__subtitle {
+    font-size: 1rem;
+  }
+
+  .btn--learn-more {
+    font-size: 1.4rem;
   }
 }

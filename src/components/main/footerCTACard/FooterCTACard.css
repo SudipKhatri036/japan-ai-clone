@@ -44,17 +44,20 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 570px) {
+  .cta-card {
+    width: 100%;
+  }
+
   .cta-card h2 {
-    font-size: 2vh;
+    font-size: 4vh;
   }
 
   .cta-card p {
-    font-size: 1.3vh;
-    margin-bottom: 2rem;
+    font-size: 2vh;
   }
 
   .btn--footer-cta {
-    font-size: 1.1vh;
+    font-size: 1.7vh;
   }
 }

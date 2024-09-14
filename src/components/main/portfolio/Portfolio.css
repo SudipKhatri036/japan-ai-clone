@@ -24,3 +24,29 @@
 .small-img {
   max-width: 100%;
 }
+
+@media only screen and (max-width: 650px) {
+  .portfolio__img-cont {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .portfolio__img-cont {
+    gap: 1rem;
+  }
+
+  .large-img-cont {
+    width: 60%;
+  }
+
+  .small-img-cont {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .portfolio {
+    padding: 1rem;
+  }
+}

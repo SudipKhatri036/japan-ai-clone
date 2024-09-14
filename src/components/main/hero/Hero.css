@@ -89,7 +89,7 @@
 @media only screen and (max-width: 540px) {
   .hero {
     padding-top: 20rem;
-    margin-top: 1rem;
+    margin-top: 100px;
   }
 
   .hero__description {
@@ -114,8 +114,13 @@
 }
 
 @media only screen and (max-width: 340px) {
+  .hero__title {
+    font-size: 2.5vh;
+  }
+
   .hero__description {
     font-size: 1.3vh;
     line-height: 1rem;
+    padding-top: 5rem;
   }
 }

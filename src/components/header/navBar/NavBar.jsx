@@ -16,7 +16,7 @@ const menuList = [
   },
   {
     title: "Company profile",
-    href: "/profile",
+    href: "#profile",
   },
   {
     title: "Seminar",
@@ -29,7 +29,7 @@ const menuList = [
   },
   {
     title: "company introduction materials",
-    href: "/companyGuide",
+    href: "/companyguide",
   },
   {
     title: "inquiry",
@@ -37,16 +37,19 @@ const menuList = [
   },
 ];
 
-function NavBar({ isMenuActive, isFixedNav }) {
+function NavBar({ setIsMenuActive }) {
   return (
-    <nav
-      className={`nav ${isMenuActive ? "nav--active" : ""} ${
-        !isMenuActive && isFixedNav ? "c-dark" : ""
-      }`}
-    >
+    <nav className={`nav`}>
       <ul className="nav__list">
         {menuList.map((list, index) => {
-          return <NavBarLink key={index} list={list} index={index} />;
+          return (
+            <NavBarLink
+              key={index}
+              list={list}
+              index={index}
+              setIsMenuActive={setIsMenuActive}
+            />
+          );
         })}
       </ul>
     </nav>

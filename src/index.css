@@ -71,8 +71,20 @@ body {
   transform: translateX(-50%);
 }
 
+h2.page-heading {
+  text-align: center;
+  font-size: 3vw;
+  background: linear-gradient(90deg, #000000 0%, #0450c2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media only screen and (max-width: 768px) {
   .section-heading {
+    font-size: 3vh;
+  }
+
+  h2.page-heading {
     font-size: 3vh;
   }
 }

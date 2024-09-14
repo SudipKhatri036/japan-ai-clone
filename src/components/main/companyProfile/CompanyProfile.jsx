@@ -2,7 +2,7 @@ import "./CompanyProfile.css";
 
 function CompanyProfile() {
   return (
-    <section className="company-profile">
+    <section className="company-profile" id="profile">
       <h2>
         Company Profile <span>corporate profile</span>
       </h2>

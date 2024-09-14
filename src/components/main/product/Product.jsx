@@ -14,7 +14,7 @@ function Product() {
         subtitle="A fully automated AI meeting minutes"
         imgSrc="./product_speech_img.jpeg"
         bgName="speech-bg"
-        direction="row-rev"
+        direction=" row-rev"
       />
       <ProductCard
         subtitle="including strategy formulation, analysis, and creative generation"

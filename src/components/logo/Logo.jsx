@@ -1,8 +1,10 @@
-function Logo({ imgSrc }) {
+import { NavLink } from "react-router-dom";
+
+function Logo() {
   return (
-    <a href="#" className="logo">
-      <img src={imgSrc} className="logo__image" />
-    </a>
+    <NavLink to="/" className="logo">
+      <img src="./logo_new.jpeg" className="logo__image" />
+    </NavLink>
   );
 }
 

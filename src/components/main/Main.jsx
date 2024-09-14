@@ -3,7 +3,7 @@ import { useRef } from "react";
 import CompanyProfile from "./companyProfile/CompanyProfile";
 import FooterCTA from "./footerCTA/FooterCTA";
 import Hero from "./hero/Hero";
-import HorizontalLine from "./horizontalLine/HorizontalLine";
+import HorizontalLine from "../horizontalLine/HorizontalLine";
 import Overview from "./overview/Overview";
 import PostCardsCont from "./postCardsCont/PostCardCont";
 import Product from "./product/Product";
