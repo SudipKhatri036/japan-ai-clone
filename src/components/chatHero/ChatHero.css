@@ -1,7 +1,7 @@
 .chat__hero {
   width: 100%;
   height: calc(90vh - 80px);
-  background: url(../../chat-hero-bg.png) no-repeat;
+  background: url(../../../chat-hero-bg.png) no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
@@ -58,7 +58,7 @@
   position: absolute;
   right: 5%;
   bottom: 20%;
-  background: url(../../imagemac.png) no-repeat;
+  background: url(../../../imagemac.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -66,7 +66,7 @@
 .mac-screen {
   width: 380px;
   height: 245px;
-  background: url(../../mask.svg) no-repeat;
+  background: url(../../../mask.svg) no-repeat;
   background-size: cover;
   background-position: center;
   position: absolute;

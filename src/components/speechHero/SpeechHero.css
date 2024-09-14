@@ -5,13 +5,13 @@
 }
 
 .speech .speech__hero-cont {
-  background: url("./speech-hero-bg.png") no-repeat;
+  background: url("../../../speech-hero-bg.png") no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .marketing .speech__hero-cont {
-  background: url("./marketing-hero-bg.png") no-repeat;
+  background: url("../../../marketing-hero-bg.png") no-repeat;
   background-position: center;
   background-size: cover;
 }
